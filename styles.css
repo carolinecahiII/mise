@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Black.otf') format('opentype');
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Bold.otf') format('opentype');
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-BoldItalic.otf') format('opentype');
+    font-weight: bold; /* Bold */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Italic.otf') format('opentype');
+    font-weight: normal; /* Use normal or the appropriate weight if known */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Regular.otf') format('opentype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Thin.otf') format('opentype');
+    font-weight: 200; /* Light */
+    font-style: light;
+}
+@font-face {
+    font-family: 'Paradose';
+    src: url('fonts/paradose.ttf') format('opentype');
+    font-weight: normal; /* Adjust as necessary */
+    font-style: normal; }
+@font-face {
+    font-family: 'Raglot';
+    src: url('fonts/Raglot Demo.otf') format('opentype');
+    font-weight: normal; /* Adjust as necessary */
+    font-style: normal; /* Adjust if the font has a specific style */
+}
+
+/* For ZTChintzy Black */
+.black-text {
+    font-family: 'ZTChintzy';
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+/* For ZTChintzy Bold */
+.bold-text {
+    font-family: 'ZTChintzy';
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+/* For ZTChintzy Bold Italic */
+.bold-italic-text {
+    font-family: 'ZTChintzy';
+    font-weight: bold; /* Bold */
+    font-style: italic;
+}
+
+/* For ZTChintzy Italic */
+.italic-text {
+    font-family: 'ZTChintzy';
+    font-weight: normal; /* Assuming normal weight for Italic, adjust if needed */
+    font-style: italic;
+}
+.light-text{
+    font-family: 'ZTChintzy';
+    font-weight: normal; /* Assuming normal weight for Italic, adjust if needed */
+    font-style: light;
+}
+
+/* For ZTChintzy Light */
+.reg-text {
+    font-family: 'ZTChintzy';
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+.raglot {
+    font-family: 'Raglot', sans-serif; /* Fallback to sans-serif in case the custom font doesn't load */
+}
+.paradose {
+    font-family: 'Paradose', sans-serif; /* Fallback to sans-serif in case the custom font doesn't load */
+}
+
+#logo {
+    font-family: 'Raglot', sans-serif; /* Fallback to sans-serif */
+    color: #016bf5; /* Specific color for 'mise.' link */
+    font-size: 60px;
+}
+
+
+body{
+    margin: 0; /* Removed left and right margins */
+    padding: 0;
+    background: #dfded8;
+    font-family: 'ZTChintzy';
+    font-weight: 300; /* Regular */
+    font-style: normal;
+    min-height: 100vh; /* Make sure body at least fills the viewport */
+    display: flex;
+    flex-direction: column; /* Stack main content and footer */
+}
+main {
+    padding: 20px;
+    font-family: 'ZTChintzy', sans-serif; /* Applying the ZTChintzy font */
+    font-weight: bold;
+}
+.two-column-layout {
+    display: flex;
+    align-items: center;
+    gap: 200px; /* Adjust the gap between text and image */
+    text-align: left;
+    position: relative; /* Ensure this is relative to allow absolute positioning within */
+}
+
+main img {
+    width: auto; /* Maintains the image's aspect ratio */
+    max-width: 30%; /* Ensures the image doesn't overflow its container */
+    flex-grow: 1; /* Allows the image to grow and fill available space */
+    margin-left: -50px; /* Adjusts the image position relative to the text, if needed */
+}
+
+.login-form-container {
+    position: absolute;
+    top: 35vh; /* Adjust based on your needs */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 30vw; /* Or a fixed width, depending on your design */
+    height: 76vh; /* Adjust based on your content or set a fixed height */
+    background-image: url('images/receipt.png'); /* Path to your image */
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+ }
+ .reg-form-container {
+    position: absolute;
+    top: 35vh; /* Adjust based on your needs */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 30vw; /* Or a fixed width, depending on your design */
+    height: 76vh; /* Adjust based on your content or set a fixed height */
+    background-image: url('images/login.png'); /* Path to your image */
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+ }
+ input {
+    font-family: 'Paradose', sans-serif; /* Ensures input fields use the ZTChintzy font */
+    font-weight: bold; /* Apply bold font-weight if needed */
+    /* Add any other font styles you wish to apply to input fields */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    display: block;
+    margin: 20px; /* Increased top and bottom margin to move fields down */
+    width: 50%; /* Make input fields responsive to the container size */
+    padding: 3%; /* Responsive padding based on viewport width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#username{
+    margin-top: 35vh;
+    margin-left: 6vw;
+}
+#password{
+    margin-left: 6vw;
+}
+
+.login-form button {
+    font-family: 'Paradose', sans-serif; /* Applying the ZTChintzy font */
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin: 20px auto 0; /* Adjust margin as needed */
+    margin-bottom: 20px;
+    padding: 1vw 2vw; /* Responsive padding based on viewport width */
+    background-color: #016bf5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.reg-button{
+    font-family: 'ZTChintzy', sans-serif; /* Applying the ZTChintzy font */
+    font-weight: bold;
+    color: #016bf5;
+    background-color: #dfded8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensures the button takes its own line */
+    margin: 20px auto; /* Centers the button and adds margin to the top */
+    padding: 10px 20px; /* Adjust padding to make the button less wide */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from the link */
+    width: auto; /* Adjusts width to fit content, you can set a specific width like 150px if needed */
+    max-width: 100px; /* Prevents the button from becoming too wide, adjust as necessary */
+}
+
+h1{
+    font-family: 'ZTChintzy', sans-serif;
+    font-style: bold;
+    font-size: 60px;
+}
+
+header {
+    background: #dfded8;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    font-family: 'Paradose', sans-serif; /* Fallback to sans-serif */
+    font-weight: bold; /* Bold style for all nav links */
+    color: #000; /* Change color as needed */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-container {
+    flex: 1; /* Allows main content to grow and push the footer down */
+    margin-left: 10%;
+    margin-right: 10%; /* Applied margins here */
+    text-align: center;
+}
+.about {
+    display: flex; /* Aligns the children side by side */
+    padding: 20px;
+    font-family: 'ZTChintzy', sans-serif;
+    text-align: left;
+    align-items: center; /* Vertically centers the content if one side is taller */
+    gap:10vw; /* Adds some space between the text and the image */
+}
+.about h1{
+    color:#f07c39;
+    font-family: 'Raglot', sans-serif; /* Fallback to sans-serif in case ZTChintzy doesn't load */
+    font-weight: bold; /* Regular weight */
+    font-style: normal; /* Normal style */
+}
+.about p {
+    font-family: 'ZTChintzy', sans-serif; /* Ensures paragraphs in .about use ZTChintzy */
+    font-weight: 300; /* Applies the light font weight */
+    text-align: left;
+}
+
+.about-text {
+    flex: 1; /* Allows the text container to fill the space */
+}
+
+.about-image {
+    flex: 1; /* Allows the image container to fill the space */
+    max-width: 50%; /* Limits the image container's width to half of the parent */
+}
+
+.about-image img {
+    width: 80%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+
+}
+
+footer {
+    background: #016bf5;
+    color: #dfded8;
+    text-align: center;
+    width: 100%; /* Ensures full width */
+    font-family: 'Raglot', sans-serif; /* Fallback to sans-serif in case ZTChintzy doesn't load */
+    font-weight: bold; /* Regular weight */
+    font-style: normal; /* Normal style */
+    letter-spacing: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .two-column-layout,
+    nav {
+        flex-direction: column; /* Stacks nav items and two-column layout items vertically */
+    }
+
+    .nav-links li {
+        display: block; /* Stack nav items vertically */
+        margin: 10px 0; /* Add some vertical margin for spacing */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Optional: Adjust font size for mobile */
+    }
+
+    main img,
+    .login-form-container {
+        width: 80%; /* Adjust the width for mobile screens */
+        max-width: 350px; /* Prevents the form and image from becoming too wide on larger mobile devices */
+        margin: 20px auto; /* Center these elements */
+        position: relative; /* Resets the positioning to flow naturally within the document */
+        left: auto; /* Resets any previously set values */
+        top: auto;
+        transform: none; /* Removes any transformations applied */
+    }
+
+    .login-form-container {
+        height: auto; /* Let the height grow as needed based on content */
+        background-size: cover; /* Change to cover to ensure the background image fully covers the new dimensions */
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 70%; /* Adjust the width of input fields for easier interaction on mobile */
+        margin: 10px auto; /* Ensure consistent margin and centering */
+    }
+
+    .login-form button {
+        width: 50%; /* Adjust button width for mobile */
+    }
+}
